@@ -1,0 +1,8 @@
+# disable hard wrapping (actual newlines)
+set nowrap
+
+# enable soft wrapping (show entire line across multiple rows)
+set softwrap
+
+# show line numbers
+set linenumbers

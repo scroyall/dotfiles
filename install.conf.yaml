@@ -14,3 +14,4 @@
     ~/Pictures/roads.png:
         path: Pictures/roads.png
     ~/.fehbg: fehbg
+    ~/.nanorc: nanorc
