@@ -1,0 +1,5 @@
+[user]
+	email = scroyall@googlemail.com
+	name = Samuel Royall
+[core]
+	editor = atom --wait

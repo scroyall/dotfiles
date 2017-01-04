@@ -1,0 +1,69 @@
+!!
+!! terminal colors
+!! base16-dark
+!!
+
+#define base00 #181818
+#define base01 #282828
+#define base02 #383838
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+!! red
+#define base08 #ab4642
+!! orange
+#define base09 #dc9656
+!! yellow
+#define base0A #f7ca88
+!! green
+#define base0B #a1b56c
+!! light blue
+#define base0C #86c1b9
+!! blue
+#define base0D #7cafc2
+!! purple
+#define base0E #ba8baf
+!! brown
+#define base0F #a16946
+
+!!
+!! global
+!!
+
+!! font
+*faceName: xft:Source Code Pro for Powerline:size=10:antialias=true
+
+!! colors
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07
+
+!!
+!! rofi
+!!
+
+rofi.color-enabled: true
+rofi.color-window: argb:DD181818, base00, base03
+rofi.color-normal: base00, base05, base00, base01, base04
+rofi.color-active: base00, base0B, #002b37, base01, base0B
+rofi.color-urgent: base00, base08, base00, base01, base04
