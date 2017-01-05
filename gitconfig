@@ -3,3 +3,4 @@
 	name = Samuel Royall
 [core]
 	editor = atom --wait
+	excludesfile = ~/.gitignore

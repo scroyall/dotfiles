@@ -6,6 +6,7 @@
 - link:
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
     ~/.config/i3:
