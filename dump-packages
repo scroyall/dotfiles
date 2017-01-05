@@ -1,0 +1,3 @@
+#!/bin/bash
+
+{ yaourt -Qeq | awk '{print "  - " $0}' & printf "%s\n" "- yaourt:"; } > packages.yaml

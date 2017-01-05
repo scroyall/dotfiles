@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./install -v -p dotbot-yaourt/yaourt.py -c packages.yaml

@@ -2,6 +2,9 @@
 
 - shell:
     - mkdir -p ~/Pictures
+    -
+        command: sh install-packages
+        stdout: true
 
 - link:
     ~/.bashrc: bashrc
