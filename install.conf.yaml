@@ -3,6 +3,9 @@
 - shell:
     - mkdir -p ~/Pictures
     -
+        command: sudo pacman -Sy
+        stdout: true
+    -
         command: sh install-packages
         stdout: true
 
