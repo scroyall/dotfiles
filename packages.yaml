@@ -39,6 +39,7 @@
   - gettext
   - git
   - glibc
+  - gmock
   - gptfdisk
   - grep
   - groff
