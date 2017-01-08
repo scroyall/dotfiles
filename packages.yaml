@@ -12,6 +12,7 @@
   - binutils
   - bison
   - bzip2
+  - cmake
   - compton
   - coreutils
   - cryptsetup
@@ -49,6 +50,7 @@
   - i3blocks
   - i3lock
   - i3status
+  - ifplugd
   - inetutils
   - intel-ucode
   - iproute2
@@ -56,11 +58,14 @@
   - iw
   - jfsutils
   - less
+  - lib32-libpulse
+  - lib32-mesa-vdpau
   - libtool
   - licenses
   - linux
   - logrotate
   - lvm2
+  - lxappearance
   - m4
   - make
   - man-db
@@ -90,6 +95,8 @@
   - s-nail
   - sed
   - shadow
+  - steam
+  - steam-native-runtime
   - sudo
   - sysfsutils
   - sysstat
@@ -97,6 +104,7 @@
   - tar
   - texinfo
   - thunar
+  - tigervnc
   - ttf-droid
   - ttf-font-awesome
   - unzip
