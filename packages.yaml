@@ -21,6 +21,7 @@
   - dialog
   - diffutils
   - dmenu
+  - doxygen
   - e2fsprogs
   - elementary-icon-theme
   - f2fs-tools
@@ -41,6 +42,7 @@
   - glibc
   - gmock
   - gptfdisk
+  - graphviz
   - grep
   - groff
   - grub
