@@ -95,8 +95,10 @@
   - psmisc
   - python
   - quodlibet
+  - rbenv
   - reiserfsprogs
   - rofi
+  - ruby-build
   - s-nail
   - sed
   - shadow
