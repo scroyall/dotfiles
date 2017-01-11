@@ -27,3 +27,6 @@
         path: Pictures/roads.png
     ~/.fehbg: fehbg
     ~/.nanorc: nanorc
+    ~/.vnc/xstartup:
+        path: vnc/xstartup
+        create: true
