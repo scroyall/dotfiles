@@ -1,0 +1,82 @@
+FORMAT HDD
+
+gdisk /dev/sdX
+  1M BIOS boot
+  200M boot
+  10G os
+  ...G home
+
+MAKE FILE SYSTEMS FOR UNENCRYPTED BOOT PARTITION
+
+sudo mkfs.ext2 /dev/sdX2
+sudo mkdir /mnt/boot
+sudo mount /dev/sdX2 /mnt/boot
+
+ENCRYPT WITH PASSPHRASE AND MAKE FILE SYSTEM FOR ROOT PARTITION
+
+sudo cryptsetup -y -v luksFormat /dev/sdX3
+sudo cryptsetup open /dev/sda3 crypttemp
+sudo cryptsetup luksHeaderBackup /dev/sdX3 --header-backup-file ~/luks-header-sdX3.img
+sudo mkfs.f2fs /dev/mapper/crypttemp
+sudo mount /dev/mapper/crypttemp /mnt
+
+ENCRYPT WITH KEYFILE ON ROOT AND MAKE FILE SYSTEM FOR HOME PARTITION
+
+sudo cryptsetup -v luksFormat /dev/sdX4 /mnt/keyfile
+sudo cryptsetup -v luksAddKey /dev/sdX4 --key-file /mnt/keyfile
+sudo cryptsetup open /dev/sdX4 crypttemphome --key-file /mnt/keyfile
+sudo cryptsetup luksHeaderBackup /dev/sdX4 --header-backup-file ~/luks-header-sdX4.img
+sudo mkfs.f2fs /dev/mapper/crypttemphome
+sudo mkdir /mnt/home
+sudo mount /dev/mapper/crypttemphome /mnt/home
+
+INSTALL BASE PACKAGES
+
+sudo pacstrap /mnt base base-devel f2fs-tools grub
+
+GENERATE FSTAB
+
+sudo genfstab -U /mnt >> /mnt/etc/fstab
+
+CHROOT INTO NEW SYSTEM
+
+sudo arch-chroot /mnt
+
+SET TIME, TIMEZONE ETC.
+
+sudo ln -s /usr/share/zoneinfo/Europe/London /etc/localtime
+sudo hwclock --systohc
+
+Uncomment zone in /etc/locale.gen
+
+locale-gen
+echo "LANG=en_GB.UTF-8" > /etc/locale.conf
+
+HOSTNAME ETC.
+
+echo "SAMX" > /etc/hostname
+127.0.0.1 SAMX.localdomain SAMX # /etc/hosts
+
+OPTIONAL WIFI
+
+sudo pacman -S iw wpa_supplicant
+
+CONFIGURE /etc/mkinitcpio.conf
+
+HOOKS = "... keyboard block encrypt ... filesystems ..."
+mkinitcpio -p linux
+
+PASSWORD
+
+passwd
+
+GRUB
+
+# get sdX3 uuid
+lsblk -f
+
+nano /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="... cryptdevice=UUID=<device-UUID>:cryptroot root=/dev/mapper/cryptroot"
+
+grub-install --target=i386-pc /dev/sdx
+grub-mkconfig -o /boot/grub/grub.cfg
