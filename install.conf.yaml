@@ -3,13 +3,21 @@
 - shell:
     - mkdir -p ~/Pictures
     -
+        command: sudo pacman -Sy
+        stdout: true
+    -
         command: sh install-packages
         stdout: true
 
 - link:
+    ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.config/gtk-3.0:
+        path: config/gtk-3.0/
+        create: true
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
     ~/.config/i3:

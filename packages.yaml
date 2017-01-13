@@ -12,6 +12,7 @@
   - binutils
   - bison
   - bzip2
+  - cmake
   - compton
   - coreutils
   - cryptsetup
@@ -20,6 +21,7 @@
   - dialog
   - diffutils
   - dmenu
+  - doxygen
   - e2fsprogs
   - elementary-icon-theme
   - f2fs-tools
@@ -38,16 +40,21 @@
   - gettext
   - git
   - glibc
+  - gmock
   - gptfdisk
+  - graphviz
   - grep
+  - groff
   - grub
   - gst-libav
   - gst-plugins-bad
+  - gtest
   - gzip
   - i3-wm
   - i3blocks
   - i3lock
   - i3status
+  - ifplugd
   - inetutils
   - intel-ucode
   - iproute2
@@ -55,11 +62,14 @@
   - iw
   - jfsutils
   - less
+  - lib32-libpulse
+  - lib32-mesa-vdpau
   - libtool
   - licenses
   - linux
   - logrotate
   - lvm2
+  - lxappearance
   - m4
   - make
   - man-db
@@ -89,6 +99,8 @@
   - s-nail
   - sed
   - shadow
+  - steam
+  - steam-native-runtime
   - sudo
   - sysfsutils
   - sysstat
@@ -96,6 +108,7 @@
   - tar
   - texinfo
   - thunar
+  - tigervnc
   - ttf-droid
   - ttf-font-awesome
   - unzip
@@ -105,10 +118,12 @@
   - which
   - wpa_actiond
   - wpa_supplicant
+  - xf86-input-libinput
   - xf86-video-intel
   - xfsprogs
   - xorg-server
   - xorg-xinit
   - xorg-xmessage
+  - xorg-xset
   - xterm
   - yaourt
