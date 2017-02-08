@@ -12,6 +12,7 @@
   - binutils
   - bison
   - bzip2
+  - cifs-utils
   - cmake
   - compton
   - coreutils
@@ -28,6 +29,7 @@
   - fakeroot
   - feh
   - file
+  - file-roller
   - filesystem
   - findutils
   - firefox
@@ -37,10 +39,12 @@
   - gawk
   - gcc
   - gcc-libs
+  - gcovr
   - gettext
   - git
   - glibc
   - gmock
+  - gparted
   - gptfdisk
   - graphviz
   - grep
@@ -49,6 +53,7 @@
   - gst-libav
   - gst-plugins-bad
   - gtest
+  - gvfs
   - gzip
   - i3-wm
   - i3blocks
@@ -61,6 +66,8 @@
   - iputils
   - iw
   - jfsutils
+  - jre8-openjdk
+  - lcov
   - less
   - lib32-libpulse
   - lib32-mesa-vdpau
@@ -94,14 +101,17 @@
   - procps-ng
   - psmisc
   - python
+  - qt4
   - quodlibet
   - rbenv
   - reiserfsprogs
   - rofi
   - ruby-build
   - s-nail
+  - samba
   - sed
   - shadow
+  - smbclient
   - steam
   - steam-native-runtime
   - sudo
@@ -111,6 +121,7 @@
   - tar
   - texinfo
   - thunar
+  - thunar-archive-plugin
   - tigervnc
   - ttf-droid
   - ttf-font-awesome
@@ -118,6 +129,7 @@
   - usbutils
   - util-linux
   - vi
+  - vlc
   - which
   - wpa_actiond
   - wpa_supplicant
@@ -127,6 +139,7 @@
   - xorg-server
   - xorg-xinit
   - xorg-xmessage
+  - xorg-xrandr
   - xorg-xset
   - xterm
   - yaourt
