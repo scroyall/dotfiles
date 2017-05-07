@@ -87,6 +87,7 @@
   - nano
   - netctl
   - nitrogen
+  - ntfs-3g
   - openssh
   - openvpn
   - package-query
@@ -119,6 +120,8 @@
   - sysstat
   - systemd-sysvcompat
   - tar
+  - task
+  - tasksh
   - texinfo
   - thunar
   - thunar-archive-plugin
